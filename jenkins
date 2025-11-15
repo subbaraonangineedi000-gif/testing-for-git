@@ -1,10 +1,22 @@
-# hello.py
+pipeline {
+    agent any
 
-def greet():
-    print("Hello, World!")
-    name = input("Enter your name: ")
-    print(f"Hello, {name}! Welcome to Git practice.")
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
 
-if __name__ == "__main__":
-    greet()
- 
